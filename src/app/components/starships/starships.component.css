@@ -1,0 +1,7 @@
+.starship-item {
+    background-color: #151515;
+}
+
+.starship-item:hover {
+    background-color: #353535;
+}
