@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { StarshipsComponent } from './components/starships/starships.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { StarshipComponent } from './components/starship/starship.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     StarshipsComponent,
     HomeComponent,
     NavbarComponent,
+    StarshipComponent,
   ],
   imports: [
     BrowserModule,

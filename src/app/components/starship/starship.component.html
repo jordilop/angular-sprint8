@@ -1,0 +1,27 @@
+<div class="row justify-content-center text-secondary">
+    <div class="col-8">
+        <div class="row justify-content-center my-3 border-3 border-bottom border-danger">
+            <img src={{image}} alt="starship image" class="img-fluid w-75 ">
+        </div>
+        <h2 class="mb-4">{{starship.name | uppercase}}</h2>
+        <div class="row">
+            <div class="col pe-2">
+                <p>Model: {{starship.model}}</p>
+                <p>Manufacturer: {{starship.manufacturer}}</p>
+                <p>Cost in credits: {{starship.cost_in_credits}}</p>
+                <p>Length: {{starship.length}}</p>
+                <p>Max Atmosphering Speed: {{starship.max_atmosphering_speed}}</p>
+                <p>Crew: {{starship.crew}}</p>
+                <p>Passengers: {{starship.passengers}}</p>
+            </div>
+            <div class="col">
+                <p>Starship Class: {{starship.starship_class}}</p>
+                <p>Hyperdrive Rating: {{starship.hyperdrive_rating}}</p>
+                <p>Consumables: {{starship.consumables}}</p>
+                <p>MGLT: {{starship.MGLT}}</p>
+                <p>Pilots: {{starship.pilots}}</p>
+                <p>Films: {{starship.pilots}}</p>
+            </div>
+        </div>
+    </div>
+</div>

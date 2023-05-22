@@ -10,6 +10,7 @@ import { StarwarsService } from 'src/app/services/starwars.service';
 export class StarshipsComponent implements OnInit {
 
   starshipList: Starship[] = [];
+  starshipId: string = '0';
 
   constructor(private starwarsService: StarwarsService) { }
 
@@ -20,8 +21,13 @@ export class StarshipsComponent implements OnInit {
   getStarships() {
     this.starwarsService.getStarships()
       .subscribe(starships => {
+        console.log(starships.results);
         this.starshipList = starships.results;
       })
+  }
+
+  getStarshipId(url: string) {
+    return this.starwarsService.getStartshipId(url);
   }
 
 }
