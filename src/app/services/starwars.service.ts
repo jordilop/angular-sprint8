@@ -13,8 +13,8 @@ export class StarwarsService {
 
   constructor(private http: HttpClient) { }
 
-  getStarships() {
-    const path = `${this.api}/starships`;
+  getStarships(page: string) {
+    const path = `${this.api}/starships?page=${page}`;
     return this.http.get<Starships>(path);
   }
 

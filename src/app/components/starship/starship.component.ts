@@ -29,6 +29,7 @@ export class StarshipComponent implements OnInit {
     films: [],
     url: ''
   };
+  isLoading: boolean = true;
 
   constructor(private starwarsService: StarwarsService, private route: ActivatedRoute) { }
 
@@ -43,8 +44,12 @@ export class StarshipComponent implements OnInit {
   }
 
   getStarShip(id: string) {
+    this.isLoading = true;
     this.starwarsService.getStarship(id)
-      .subscribe(starship => this.starship = starship);
+      .subscribe(starship => {
+        this.isLoading = false;
+        this.starship = starship
+      });
   }
 
   getStarshipImage(id: string) {

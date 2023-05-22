@@ -9,6 +9,7 @@ import { StarshipsComponent } from './components/starships/starships.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { StarshipComponent } from './components/starship/starship.component';
+import { LoadingComponent } from './components/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { StarshipComponent } from './components/starship/starship.component';
     HomeComponent,
     NavbarComponent,
     StarshipComponent,
+    LoadingComponent,
   ],
   imports: [
     BrowserModule,

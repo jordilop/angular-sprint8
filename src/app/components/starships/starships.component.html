@@ -8,4 +8,8 @@
             </a>
         </div>
     </div>
+    <div *ngIf="!isLoading && showMoreButton" class="col-5 text-center my-3">
+        <button type="button" class="btn btn-light" (click)="setCurrentPage()">View more...</button>
+    </div>
 </div>
+<app-loading *ngIf="isLoading"></app-loading>
