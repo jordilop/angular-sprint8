@@ -1,11 +1,9 @@
-<header>
-    <div class="row bg-black justify-content-center py-3">
-        <div class="col-3">
-            <img src="../assets/img/logo-starwars.png" class="img-fluid" alt="">
-        </div>
-    </div>
-    <app-navbar></app-navbar>
+<header class="container-fluid bg-black border-bottom border-secondary">
+    <app-header></app-header>
 </header>
-<main class="container-fluid bg-black">
+<main class="container-fluid bg-black min-vh-100 pb-3">
     <router-outlet></router-outlet>
 </main>
+<footer class="container-fluid">
+    <app-footer></app-footer>
+</footer>

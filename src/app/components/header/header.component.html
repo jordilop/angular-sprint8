@@ -1,0 +1,42 @@
+<div class="row bg-black justify-content-center py-3">
+    <div class="col text-center">
+        <nav class="nav fs-4 justify-content-center align-items-center">
+            <a class="nav-link link-light" href="https://www.facebook.com/StarWars">
+                <fa-icon [icon]="faFacebook"></fa-icon>
+            </a>
+            <a class="nav-link link-light" href="https://www.instagram.com/starwars/">
+                <fa-icon [icon]="faInstagram"></fa-icon>
+            </a>
+            <a class="nav-link link-light" href="https://www.youtube.com/user/starwars">
+                <fa-icon [icon]="faYoutube"></fa-icon>
+            </a>
+            <a class="nav-link link-light" href="https://twitter.com/starwars">
+                <fa-icon [icon]="faTwitter"></fa-icon>
+            </a>
+            <span class="text-secondary mx-2">|</span>
+            <a class="nav-link link-light" href="https://starwarskids.com/">
+                <fa-icon [icon]="faKickstarterK"></fa-icon>
+            </a>
+        </nav>
+    </div>
+    <div class="col-2">
+        <a [routerLink]="['/']">
+            <img src="../assets/img/logo-starwars.png" class="img-fluid" alt="">
+        </a>
+    </div>
+    <div class="col">
+        <nav class="nav justify-content-center">
+            <a class="nav-link link-light mx-1" [routerLink]="['/login']">
+                <fa-icon [icon]="faCircleUser" class="mx-1"></fa-icon>
+                LOGIN
+            </a>
+            <a class="nav-link link-light mx-1" [routerLink]="['/signup']">
+                <fa-icon [icon]="faUser" class="mx-1"></fa-icon>
+                SIGN UP
+            </a>
+        </nav>
+    </div>
+</div>
+<div class="row">
+    <app-navbar></app-navbar>
+</div>
