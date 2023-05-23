@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { faFacebook, faInstagram, faYoutube, faTwitter, faKickstarterK } from '@fortawesome/free-brands-svg-icons';
-import { faUser, faCircleUser } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faCircleUser, faShareSquare } from '@fortawesome/free-solid-svg-icons';
+import { User } from 'src/app/interfaces/user';
+import { UsersService } from 'src/app/services/users.service';
 
 @Component({
   selector: 'app-header',
@@ -15,4 +17,20 @@ export class HeaderComponent {
   faKickstarterK = faKickstarterK;
   faUser = faUser;
   faCircleUser = faCircleUser;
+  faShareSquare = faShareSquare;
+
+  user: User;
+
+  constructor(private userService: UsersService) {
+    this.user = this.userService.userLogged;
+  }
+
+  logout() {
+    this.user = {
+      username: '',
+      password: ''
+    }
+    this.userService.userLogged = this.user;
+    this.userService.deleteLocalStorage('Login');
+  }
 }

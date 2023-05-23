@@ -24,18 +24,29 @@
             <img src="../assets/img/logo-starwars.png" class="img-fluid" alt="">
         </a>
     </div>
-    <div class="col">
-        <nav class="nav justify-content-center">
-            <a class="nav-link link-light mx-1" [routerLink]="['/login']">
-                <fa-icon [icon]="faCircleUser" class="mx-1"></fa-icon>
-                LOGIN
-            </a>
-            <a class="nav-link link-light mx-1" [routerLink]="['/signup']">
-                <fa-icon [icon]="faUser" class="mx-1"></fa-icon>
-                SIGN UP
+    <div class="col" *ngIf="this.user.username; else menuLogin">
+        <nav class="nav justify-content-center align-items-center">
+            <div class="nav link link-light mx-1">Hello {{user.username}}!</div>
+            <a class="nav-link link-light mx-1" [routerLink]="['/']" (click)="logout()">
+                <fa-icon [icon]="faShareSquare" class="mx-1"></fa-icon>
+                LOGOUT
             </a>
         </nav>
     </div>
+    <ng-template #menuLogin>
+        <div class="col">
+            <nav class="nav justify-content-center">
+                <a class="nav-link link-light mx-1" [routerLink]="['/login']">
+                    <fa-icon [icon]="faCircleUser" class="mx-1"></fa-icon>
+                    LOGIN
+                </a>
+                <a class="nav-link link-light mx-1" [routerLink]="['/signup']">
+                    <fa-icon [icon]="faUser" class="mx-1"></fa-icon>
+                    SIGN UP
+                </a>
+            </nav>
+        </div>
+    </ng-template>
 </div>
 <div class="row">
     <app-navbar></app-navbar>

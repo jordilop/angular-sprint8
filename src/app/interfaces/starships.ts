@@ -1,5 +1,3 @@
-import { NumberSymbol } from "@angular/common";
-
 export interface Starships {
     count: number,
     next: string,
