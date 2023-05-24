@@ -19,8 +19,8 @@
                 <p>Hyperdrive Rating: {{starship.hyperdrive_rating}}</p>
                 <p>Consumables: {{starship.consumables}}</p>
                 <p>MGLT: {{starship.MGLT}}</p>
-                <p>Pilots: {{starship.pilots}}</p>
-                <p>Films: {{starship.pilots}}</p>
+                <p>Pilots: <app-pilots [pilotsUrl]="starship.pilots"></app-pilots></p>
+                <p>Films: {{starship.films}}</p>
             </div>
         </div>
     </div>

@@ -10,6 +10,7 @@ import { Starship } from 'src/app/interfaces/starships';
 })
 export class StarshipComponent implements OnInit {
 
+  pilot: string[] = [];
   id: string = '';
   image: string = '';
   starship: Starship = {
@@ -48,7 +49,8 @@ export class StarshipComponent implements OnInit {
     this.starwarsService.getStarship(id)
       .subscribe(starship => {
         this.isLoading = false;
-        this.starship = starship
+        this.starship = starship;
+        // this.pilot = starship.pilots;
       });
   }
 

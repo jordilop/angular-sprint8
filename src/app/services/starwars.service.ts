@@ -13,6 +13,10 @@ export class StarwarsService {
 
   constructor(private http: HttpClient) { }
 
+  getPilot(path: string) {
+    return this.http.get(path);
+  }
+
   getStarships(page: string) {
     const path = `${this.api}/starships?page=${page}`;
     return this.http.get<Starships>(path);
