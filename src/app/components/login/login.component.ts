@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { User } from 'src/app/interfaces/user';
+import { AuthService } from 'src/app/services/auth.service';
 import { UsersService } from 'src/app/services/users.service';
 
 @Component({
@@ -13,7 +14,7 @@ export class LoginComponent {
   user: User;
   loginError: boolean = false;
 
-  constructor(private _builder: FormBuilder, private userService: UsersService) {
+  constructor(private _builder: FormBuilder, private userService: UsersService, private authService: AuthService) {
     this.loginForm = this._builder.group({
       username: ['', Validators.required],
       password: ['', Validators.required]
@@ -27,6 +28,7 @@ export class LoginComponent {
       this.user.password = values.password;
       this.userService.setLogin(this.user);
       this.loginError = false;
+      this.authService.login();
     } else {
       this.loginError = true;
     }

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { User } from 'src/app/interfaces/user';
+import { AuthService } from 'src/app/services/auth.service';
 import { UsersService } from 'src/app/services/users.service';
 
 @Component({
@@ -14,7 +15,7 @@ export class SignupComponent {
   userExists: boolean = false;
   signupUser: boolean = false;
 
-  constructor(private _builder: FormBuilder, private userService: UsersService) {
+  constructor(private _builder: FormBuilder, private userService: UsersService, private authService: AuthService) {
     this.signupForm = this._builder.group({
       username: ['', Validators.required],
       password: ['', Validators.required]
@@ -30,6 +31,7 @@ export class SignupComponent {
       this.user.password = values.password;
       this.userService.setUser(this.user);
       this.userService.setLogin(this.user);
+      this.authService.login();
       this.signupUser = true;
     } else {
       this.userExists = true;
