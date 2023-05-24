@@ -18,6 +18,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { PilotsComponent } from './components/pilots/pilots.component';
+import { FilmsComponent } from './components/films/films.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { PilotsComponent } from './components/pilots/pilots.component';
     LoginComponent,
     SignupComponent,
     PilotsComponent,
+    FilmsComponent,
   ],
   imports: [
     BrowserModule,

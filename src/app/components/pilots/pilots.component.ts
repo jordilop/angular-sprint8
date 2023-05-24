@@ -18,7 +18,6 @@ export class PilotsComponent implements OnChanges {
         this.getPilot(url);
       });
     }
-    console.log(this.pilots);
   }
 
   getPilot(url: string) {

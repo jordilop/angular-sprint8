@@ -13,6 +13,10 @@ export class StarwarsService {
 
   constructor(private http: HttpClient) { }
 
+  getFilm(path: string) {
+    return this.http.get(path);
+  }
+
   getPilot(path: string) {
     return this.http.get(path);
   }
